@@ -1,44 +1,52 @@
-let gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    connect = require('gulp-connect');
+const gulp = require("gulp");
+const sass = require("gulp-sass"); 
+const concat = require("gulp-concat");
+const connect = require("gulp-connect");
+const browserSync = require("browser-sync");
 
-
-// Running Server
-gulp.task('connect', function(){
-    connect.server({
-        port: 3000,
-        root: './public',
-        livereload: true
-    })
-})
-
-// HTML Running Task
-gulp.task('html', function () {
-    return gulp.src('./public/*.html')
-        .pipe(gulp.dest('./public'))
-        .pipe(connect.reload());
+gulp.task("connect", () => {
+  connect.server({
+    port: 3000,
+    root: "./public"
+  });
 });
 
-// SCSS Running Task
-gulp.task('sass', function () {
-    return gulp.src('./src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/assets/styles'))
-        .pipe(connect.reload());
+gulp.task("browserSync", () => {
+  browserSync.init({
+    proxy: "localhost:3000",
+    port: 3000,
+    online: true,
+    notify: true
+  });
 });
 
-gulp.task('jsConcat', function () {
-    return gulp.src('./src/javascript/**/*.js')
-        .pipe(concat('default.js'))
-        .pipe(gulp.dest('./public/assets/scripts'));
+gulp.task("html", () => {
+  return gulp
+    .src("./public/**/*.html")
+    .pipe(gulp.dest("./public"))
+    .pipe(browserSync.stream());
 });
 
-// Watching all the Important Files for Changing
-gulp.task('watch', function () {
-    gulp.watch('./public/*.html',['html']);
-    gulp.watch('./src/scss/**/*.scss',['sass']);
-    gulp.watch('./src/javascript/**/*.js',['jsConcat']);
+gulp.task("sass", () => {
+  return gulp
+    .src("./src/scss/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./public/assets/styles"))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['connect','html','sass','jsConcat','watch']);
+gulp.task("watch", () => {
+  gulp.watch("./public/**/*.html", ["html"]);
+  gulp.watch("./src/scss/**/*.scss", ["sass"]);
+});
+
+gulp.task("default", ["connect", "browserSync", "watch"]);
+
+gulp.task("build:js", () => {
+  return gulp
+    .src("./src/javascript/**/*.js")
+    .pipe(concat("default.js"))
+    .pipe(gulp.dest("./public/assets/scripts"));
+});
+
+gulp.task("build", ["build:js"]);

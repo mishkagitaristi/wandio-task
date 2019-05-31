@@ -6,13 +6,22 @@
   box-sizing: border-box;
   vertical-align: baseline; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 html {
   font-size: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "egoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "egoe UI Emoji", "Segoe UI Symbol"; }
 
 body {
   background-color: #fff; }
@@ -20,7 +29,8 @@ body {
 a {
   text-decoration: none; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
 textarea {
@@ -30,12 +40,36 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0; }
+
+@font-face {
+  font-family: ProximaRegular;
+  src: url("../fonts/ProximaNova-Regular.ttf"); }
+
+@font-face {
+  font-family: ProximaBold;
+  src: url("../fonts/ProximaNova-Bold.ttf"); }
+
+@font-face {
+  font-family: ProximaSemibold;
+  src: url("../fonts/ProximaNova-Semibold.ttf"); }
+
+@font-face {
+  font-family: RidleyLight;
+  src: url("../fonts/RidleyGrotesk-Light.woff2"); }
+
+@font-face {
+  font-family: RidleySemibold;
+  src: url("../fonts/RidleyGrotesk-SemiBold.woff2"); }
+
+@font-face {
+  font-family: RidleyBold;
+  src: url("../fonts/RidleyGrotesk-Bold.woff2"); }
 
 .wrapper {
   width: 1200px;
@@ -57,3 +91,76 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center; }
   .fl_ali_cen {
     align-items: center; }
+
+.header {
+  width: 100%;
+  height: 373px;
+  padding: 40px 0;
+  background-image: url("../images/subpage-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+  .header__top {
+    width: 100%;
+    height: 60px;
+    padding: 0 40px;
+    margin-bottom: 70px; }
+  .header__logo svg {
+    position: relative;
+    width: 200px;
+    height: 60px; }
+  .header__nav {
+    padding-top: 21px; }
+    .header__nav-item {
+      color: #fff;
+      font-size: 18px;
+      font-family: ProximaSemibold, sans-serif;
+      padding: 8px 25px; }
+  .header__info {
+    padding: 0 15px; }
+    .header__info-title {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 58px;
+      font-family: RidleySemiBold, sans-serif;
+      font-weight: 600;
+      line-height: 1.1; }
+      .header__info-title-dot {
+        color: #ec008c;
+        font-size: 29px;
+        font-weight: 400;
+        padding-left: 2px; }
+    .header__info__path {
+      height: 20px;
+      color: #8e9dce;
+      font-size: 17px; }
+      .header__info__path-list-home {
+        padding-right: 16px;
+        font-family: ProximaRegular;
+        position: relative; }
+        .header__info__path-list-home-icon svg {
+          margin-bottom: -2px;
+          width: 20px;
+          height: 20px;
+          margin-right: 5px; }
+        .header__info__path-list-home:after {
+          content: "\BB";
+          color: #8e9dce;
+          font-family: ProximaRegular;
+          position: absolute;
+          top: 1px;
+          z-index: 2;
+          right: -4px; }
+      .header__info__path-list-contact {
+        color: #cdd6f2;
+        font-size: 17px;
+        font-family: ProximaSemiBold, sans-serif;
+        padding-left: 16px;
+        margin-top: 3px; }
+    .header__info-description {
+      text-align: right;
+      color: #a6b1d6;
+      font-size: 24px;
+      line-height: 1.458;
+      font-family: ProximaRegular;
+      padding-top: 18px; }
