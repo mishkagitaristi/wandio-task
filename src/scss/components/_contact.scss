@@ -1,0 +1,77 @@
+.contact {
+    width: 100%;
+    height: 235px;
+    padding: 70px 0;
+    &__block {
+        width: 300px;
+        height: 235px;
+        padding: 0 15px;
+        align-items: center;
+        &-image {
+            width: 108px;
+            height: 108px;
+            border-radius: 50%;
+            border: 2px solid #c5c5c5;
+            margin: 0 81px 30px 81px;
+            position: relative;
+            &:before {
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 50%;
+                border: 1px solid #e3e3e3;
+                margin: 3px;
+                position: absolute;
+            }
+            &-address {
+                position: absolute;
+                top: calc(50% - 23.1px);
+                left: calc(50% - 15px);
+            }
+            &-phone {
+                position: absolute;
+                top: calc(50% - 23.1px);
+                left: calc(50% - 23px);
+            }
+            &-mail {
+                position: absolute;
+                top: calc(50% - 23.1px);
+                left: calc(50% - 23px);
+            }
+            &-social {
+                position: absolute;
+                top: calc(50% - 23.1px);
+                left: calc(50% - 23px);
+            }
+        }
+        &-heading {
+            color: #454545;
+            font-size: 17px;
+            margin-bottom: 20px;
+            margin-top: 4px;
+            font-family: ProximaSemiBold;
+        }
+        &-description {
+            font-size: 17px;
+            font-family: ProximaRegular;
+            text-align: center;
+            line-height: 1.5;
+            color: #333;
+            &--top {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.facebook {
+    color: #4562ac;
+    font-family: ProximaSemiBold;
+}
+
+.instagram {
+    color: #ec008c;
+    font-family: ProximaSemiBold;
+}

@@ -164,3 +164,68 @@ input[type="number"]::-webkit-outer-spin-button {
       line-height: 1.458;
       font-family: ProximaRegular;
       padding-top: 18px; }
+
+.contact {
+  width: 100%;
+  height: 235px;
+  padding: 70px 0; }
+  .contact__block {
+    width: 300px;
+    height: 235px;
+    padding: 0 15px;
+    align-items: center; }
+    .contact__block-image {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      border: 2px solid #c5c5c5;
+      margin: 0 81px 30px 81px;
+      position: relative; }
+      .contact__block-image:before {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        border: 1px solid #e3e3e3;
+        margin: 3px;
+        position: absolute; }
+      .contact__block-image-address {
+        position: absolute;
+        top: calc(50% - 23.1px);
+        left: calc(50% - 15px); }
+      .contact__block-image-phone {
+        position: absolute;
+        top: calc(50% - 23.1px);
+        left: calc(50% - 23px); }
+      .contact__block-image-mail {
+        position: absolute;
+        top: calc(50% - 23.1px);
+        left: calc(50% - 23px); }
+      .contact__block-image-social {
+        position: absolute;
+        top: calc(50% - 23.1px);
+        left: calc(50% - 23px); }
+    .contact__block-heading {
+      color: #454545;
+      font-size: 17px;
+      margin-bottom: 20px;
+      margin-top: 4px;
+      font-family: ProximaSemiBold; }
+    .contact__block-description {
+      font-size: 17px;
+      font-family: ProximaRegular;
+      text-align: center;
+      line-height: 1.5;
+      color: #333; }
+      .contact__block-description--top {
+        margin-top: 5px; }
+
+.facebook {
+  color: #4562ac;
+  font-family: ProximaSemiBold; }
+
+.instagram {
+  color: #ec008c;
+  font-family: ProximaSemiBold; }
