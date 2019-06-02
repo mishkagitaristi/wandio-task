@@ -1,0 +1,184 @@
+.getstarted {
+    width: 100%;
+    min-height: 631px;
+    padding: 60px 15px 70px 15px;
+    animation-duration: 1s;
+    &__header {
+        margin-bottom: 30px;
+        font-family: RidleySemiBold;
+        font-size: 46px;
+        font-weight: 600;
+        color: #27376c;
+        line-height: 1.1;
+        & span {
+            color: #ec008c;
+        }
+    }
+    &__container {
+        &__personal {
+            &-input {
+                width: 32%;
+                color: #454545;
+                font-size: 20px;
+                padding: 2px 2px 15px 2px;
+                border-bottom: 1px solid #e3e3e3;
+                transition: all 0.3s;
+                font-family: inherit;
+                margin-bottom: 65px;
+                &:focus {
+                    border-color: #ec008c;
+                }
+            }
+        }
+        &__company {
+            &-input {
+                width: 375px;
+                color: #454545;
+                font-size: 20px;
+                padding: 2px 2px 15px 2px;
+                border-bottom: 1px solid #e3e3e3;
+                transition: all 0.3s;
+                font-family: inherit;
+                margin-bottom: 45px;
+
+                &:last-child {
+                    width: calc(100% - 400px);
+                }
+                &:focus {
+                    border-color: #ec008c;
+                }
+            }
+        }
+        &__help {
+            &-input {
+                width: 100%;
+                height: 103px;
+                color: #454545;
+                font-size: 20px;
+                padding: 2px 2px 50px 2px;
+                border-bottom: 1px solid #e3e3e3;
+                transition: all 0.3s;
+                font-family: inherit;
+                &:focus {
+                    border-color: #ec008c;
+                }
+            }
+        }
+    }
+}
+.shadow {
+    width: 100%;
+    box-shadow: 0px 2px 25px rgb(223, 222, 222),
+        0px -2px 25px rgb(223, 223, 223);
+}
+.hidden {
+    &__summary {
+        &-timeframe {
+            width: 49%;
+            &-input {
+                width: 100%;
+                color: #454545;
+                font-size: 20px;
+                border: none;
+                border-bottom: 1px solid #e3e3e3;
+                border-radius: 0;
+                padding-bottom: 17px;
+                display: block;
+                position: relative;
+                background: url("../images/calendar-icon.png") no-repeat top 50%
+                    right 5px;
+            }
+        }
+        &-budget {
+            width: 49%;
+            &-input {
+                width: 100%;
+                color: #454545;
+                font-size: 20px;
+                border: none;
+                border-bottom: 1px solid #e3e3e3;
+                border-radius: 0;
+                padding-bottom: 17px;
+                display: block;
+                background: url("https://radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/pound.svg")
+                    no-repeat top 50% right 5px;
+                background-size: 25px 25px;
+            }
+        }
+        &-header {
+            color: #27376c;
+            font-size: 24px;
+            font-family: ProximaSemiBold, sans-serif;
+            margin: 100px 0 45px;
+        }
+    }
+}
+
+.questions {
+    padding-top: 30px;
+    justify-content: center;
+    cursor: pointer;
+    & span {
+        font-family: ProximaSemiBold;
+        font-size: 20px;
+        color: #797979;
+        &:after {
+            content: "";
+            top: -3px;
+            width: 6px;
+            height: 6px;
+            border-color: #ec008c;
+            border-style: solid;
+            border-width: 0 0 2px 2px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            margin-left: 12px;
+            display: inline-block;
+            position: relative;
+        }
+    }
+    &__text {
+        font-family: ProximaSemiBold;
+        text-align: center;
+        font-size: 20px;
+        color: #ec008c;
+        border-bottom: 1px solid #ec008c;
+    }
+}
+
+.submit {
+    width: 100%;
+    &__button {
+        margin-top: 50px;
+        color: #ec008c;
+        border: 2px solid #ec008c;
+        padding: 13px 23px;
+        font-size: 17px;
+        font-family: ProximaSemiBold, sans-serif;
+        cursor: pointer;
+        border-radius: 40px;
+        background: transparent;
+        transition: all 0.3s ease-in-out;
+        padding: 13px 23px 12px;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: #ffffff;
+            background-color: #ec008c;
+            &::after {
+                transform: rotate(1turn);
+                background-image: url(//radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/right-arrow-white.svg);
+            }
+        }
+        &::after {
+            content: "";
+            width: 14px;
+            height: 12px;
+            background: url("//radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/right-arrow.svg")
+                no-repeat 50% / cover;
+            transition: all 0.3s ease-in-out;
+            margin-left: 15px;
+            display: inline-block;
+        }
+    }
+}

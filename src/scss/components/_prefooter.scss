@@ -1,0 +1,65 @@
+.prefooter {
+    margin-top: 50px;
+    &__left {
+        max-width: 800px;
+        padding: 0 15px;
+        &-name {
+            font-family: ProximaSemiBold;
+            margin-bottom: 6px;
+            color: #797979;
+            font-size: 17px;
+        }
+        &-address {
+            margin-bottom: 20px;
+            color: #797979;
+            font-size: 17px;
+            font-family: ProximaRegular;
+        }
+        &-contact {
+            &-phone {
+                font-size: 17px;
+                vertical-align: middle;
+                font-family: ProximaSemiBold;
+                color: #ec008c;
+                & span svg {
+                    margin-right: 5px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            &-mail {
+                font-size: 17px;
+                vertical-align: middle;
+                font-family: ProximaSemiBold;
+                color: #ec008c;
+                & span svg {
+                    margin-right: 5px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+    &__right{
+        &-social{
+            font-family: ProximaSemiBold;
+            color: #797979;
+            font-size: 17px;
+            text-align: right;
+            width: 100%;
+            padding-left: 78px;
+            justify-content: start;
+            &-icons{
+                &-list{
+                    justify-content: flex-end;
+                    &-item svg{
+                        margin-top: 25px;
+                        margin-right: 10px;
+                        height: 47px;
+                        width: 47px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,15 +6,15 @@ const browserSync = require("browser-sync");
 
 gulp.task("connect", () => {
   connect.server({
-    port: 3000,
+    port: 8000,
     root: "./public"
   });
 });
 
 gulp.task("browserSync", () => {
   browserSync.init({
-    proxy: "localhost:3000",
-    port: 3000,
+    proxy: "localhost:8000",
+    port: 8000,
     online: true,
     notify: true
   });
