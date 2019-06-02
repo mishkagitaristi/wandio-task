@@ -1,8 +1,5 @@
-let x = 5,
-    y = 7;
 
-const concat = () => {
-    return +x+y
-}
-
-console.log(concat());
+function show(){
+    document.getElementById("question").style.display ="none";
+    document.getElementById("checkboxes").style.display = "block";
+ }

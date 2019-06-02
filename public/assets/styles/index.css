@@ -115,7 +115,60 @@ input[type="number"]::-webkit-outer-spin-button {
       color: #fff;
       font-size: 18px;
       font-family: ProximaSemibold, sans-serif;
-      padding: 8px 25px; }
+      padding: 8px 25px;
+      position: relative; }
+      .header__nav-item-contact::before {
+        z-index: 1;
+        content: "";
+        left: 0;
+        right: 0;
+        top: -6px;
+        width: 40px;
+        height: 11px;
+        margin: 0 auto;
+        position: absolute;
+        background: url("../images/circle_top.svg") no-repeat 50%/cover;
+        display: block; }
+      .header__nav-item-contact::after {
+        z-index: 1;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 27px;
+        width: 40px;
+        height: 11px;
+        margin: 0 auto;
+        position: absolute;
+        transform: rotate(180deg);
+        background: url("../images/circle_top.svg") no-repeat 50%/cover;
+        display: block; }
+      .header__nav-item:hover::after {
+        z-index: 1;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 27px;
+        width: 40px;
+        height: 11px;
+        margin: 0 auto;
+        position: absolute;
+        transform: rotate(180deg);
+        background: url("../images/circle_top.svg") no-repeat 50%/cover;
+        transition: all 0.2s ease-in-out;
+        display: block; }
+      .header__nav-item:hover::before {
+        z-index: 1;
+        content: "";
+        left: 0;
+        right: 0;
+        top: -6px;
+        width: 40px;
+        height: 11px;
+        margin: 0 auto;
+        position: absolute;
+        background: url("../images/circle_top.svg") no-repeat 50%/cover;
+        transition: all 0.2s ease-in-out;
+        display: block; }
   .header__info {
     padding: 0 15px; }
     .header__info-title {
@@ -285,44 +338,48 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   box-shadow: 0px 2px 25px #dfdede, 0px -2px 25px #dfdfdf; }
 
-.hidden__summary-timeframe {
-  width: 49%; }
-  .hidden__summary-timeframe-input {
-    width: 100%;
-    color: #454545;
-    font-size: 20px;
-    border: none;
-    border-bottom: 1px solid #e3e3e3;
-    border-radius: 0;
-    padding-bottom: 17px;
-    display: block;
-    position: relative;
-    background: url("../images/calendar-icon.png") no-repeat top 50% right 5px; }
-
-.hidden__summary-budget {
-  width: 49%; }
-  .hidden__summary-budget-input {
-    width: 100%;
-    color: #454545;
-    font-size: 20px;
-    border: none;
-    border-bottom: 1px solid #e3e3e3;
-    border-radius: 0;
-    padding-bottom: 17px;
-    display: block;
-    background: url("https://radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/pound.svg") no-repeat top 50% right 5px;
-    background-size: 25px 25px; }
-
-.hidden__summary-header {
-  color: #27376c;
-  font-size: 24px;
-  font-family: ProximaSemiBold, sans-serif;
-  margin: 100px 0 45px; }
+.hidden {
+  display: none; }
+  .hidden__summary {
+    transition: all 2s linear; }
+    .hidden__summary-timeframe {
+      width: 49%; }
+      .hidden__summary-timeframe-input {
+        width: 100%;
+        color: #454545;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid #e3e3e3;
+        border-radius: 0;
+        padding-bottom: 17px;
+        display: block;
+        position: relative;
+        background: url("../images/calendar-icon.png") no-repeat top 50% right 5px; }
+    .hidden__summary-budget {
+      width: 49%; }
+      .hidden__summary-budget-input {
+        width: 100%;
+        color: #454545;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid #e3e3e3;
+        border-radius: 0;
+        padding-bottom: 17px;
+        display: block;
+        background: url("https://radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/pound.svg") no-repeat top 50% right 5px;
+        background-size: 25px 25px; }
+    .hidden__summary-header {
+      color: #27376c;
+      font-size: 24px;
+      font-family: ProximaSemiBold, sans-serif;
+      margin: 100px 0 45px; }
 
 .questions {
+  display: flex;
   padding-top: 30px;
   justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .1s ease-in; }
   .questions span {
     font-family: ProximaSemiBold;
     font-size: 20px;

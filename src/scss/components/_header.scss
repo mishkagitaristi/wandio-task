@@ -24,6 +24,67 @@
             font-size: 18px;
             font-family: ProximaSemibold, sans-serif;
             padding: 8px 25px;
+            position: relative;
+            &-contact{
+                &::before{
+                    z-index: 1;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    top: -6px;
+                    width: 40px;
+                    height: 11px;
+                    margin: 0 auto;
+                    position: absolute;
+                    background: url("../images/circle_top.svg") no-repeat 50%/cover;
+                    display: block;
+                }
+                &::after{
+                    z-index: 1;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    top: 27px;
+                    width: 40px;
+                    height: 11px;
+                    margin: 0 auto;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    background: url("../images/circle_top.svg") no-repeat 50%/cover;
+                    display: block;
+                }
+            }
+            &:hover { 
+                &::after{
+                    z-index: 1;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    top: 27px;
+                    width: 40px;
+                    height: 11px;
+                    margin: 0 auto;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    background: url("../images/circle_top.svg") no-repeat 50%/cover;
+                    transition: all 0.2s ease-in-out;
+                    display: block;
+                }
+                &::before {
+                    z-index: 1;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    top: -6px;
+                    width: 40px;
+                    height: 11px;
+                    margin: 0 auto;
+                    position: absolute;
+                    background: url("../images/circle_top.svg") no-repeat 50%/cover;
+                    transition: all 0.2s ease-in-out;
+                    display: block;
+                }
+            }
         }
     }
     &__info {
