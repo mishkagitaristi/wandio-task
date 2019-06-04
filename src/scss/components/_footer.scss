@@ -62,9 +62,9 @@
         border-radius: 40px;
         position: relative;
         margin-right: 15px;
-        &:hover{
+        &:hover {
             cursor: pointer;
-            background: rgba(125,139,188,.15)
+            background: rgba(125, 139, 188, 0.15);
         }
         &-top {
             color: #7d8bbc;
@@ -76,7 +76,7 @@
             padding: 1.3rem 2.3rem 1.15rem;
             display: inline-block;
         }
-        & svg{
+        & svg {
             position: absolute;
             right: 27px;
             top: 22%;
@@ -85,4 +85,16 @@
 }
 html {
     scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+    .footer {
+        &__button{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        &__wrapper {
+            padding: 0 10px;
+            flex-direction: column;
+        }
+    }
 }

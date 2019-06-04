@@ -63,3 +63,28 @@
         }
     }
 }
+@media(max-width: 600px){
+    .prefooter{
+        flex-direction: column;
+        &__right{
+            padding: 0 10px;
+            &-social{
+                justify-content: end;
+                padding-left: 0;
+                padding-top: 50px;
+                &-icons-list{
+                    justify-content: flex-start;
+                }
+            }
+        }
+        &__left{
+            &-contact{
+                flex-direction: column;
+                &-phone{
+                    padding-bottom: 10px;
+                }
+            }
+
+        }
+    }
+}

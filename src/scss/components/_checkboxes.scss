@@ -69,7 +69,28 @@
 }
 .checkboxes{
     &__options{
+        width: 100%;
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 990px) {
+    .control {
+        width: 278px;
+        margin-right: 0;
+    }
+    .checkboxes{
+        &__options{
+            justify-content: space-around;
+            height: auto;
+            flex-wrap: wrap;
+        }
+    }
+}
+@media(max-width:600px){
+    .checkboxes__options{
+        padding-left: 10px;
+        justify-content: flex-start
     }
 }
